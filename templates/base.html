@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-gradient-to-b from-gray-900 to-slate-950 p-6">
+        <h1 class="text-2xl font-bold mb-10">LyricsApp</h1>
+        <nav class="flex flex-col space-y-4">
+          <a href="#" class="px-4 py-2 rounded-2xl hover:bg-white hover:text-indigo-900 transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 rounded-2xl hover:bg-white hover:text-indigo-900 transition-colors">Profile</a>
+          <a href="#" class="px-4 py-2 rounded-2xl hover:bg-red-600 hover:text-white transition-colors">Log Out</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="flex-1 flex flex-col">
+        <!-- Header -->
+        <header class="bg-gray-800 p-4 shadow flex items-center justify-between">
+        <div>
+            <input
+              type="text"
+              placeholder="Search for lyrics..."
+              class="p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring focus:ring-indigo-500"
+            />
+          </div>
+          <div class="text-xl font-semibold">Lyrics Search</div>
+        </header>
+
+        <!-- Main Content Slot -->
+        <main class="flex-1 overflow-y-auto p-6">
+          {% block content %}{% endblock %}
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

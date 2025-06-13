@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="text-2xl font-bold mb-4">Search Results</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-gray-800 p-4 rounded shadow">
+      <h3 class="text-xl font-semibold">Song Title</h3>
+      <p class="mt-2 text-sm text-gray-400">Some sample lyrics snippet...</p>
+    </div>
+    <div class="bg-gray-800 p-4 rounded shadow">
+      <h3 class="text-xl font-semibold">Another Song</h3>
+      <p class="mt-2 text-sm text-gray-400">More lyrics to view here...</p>
+    </div>
+  </div>
+{% endblock %}
